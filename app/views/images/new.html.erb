@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="new-form">
+    <%= simple_form_for([@collection, @image]) do |f| %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.hidden_field :collection_id, value: @collection.id %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
