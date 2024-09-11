@@ -48,6 +48,7 @@ gem "simple_form"
 gem "sassc-rails"
 gem "cloudinary"
 gem "devise", '4.9.3'
+gem "down", "~> 5.0"
 
 group :development, :test do
   gem "dotenv-rails"

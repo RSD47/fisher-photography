@@ -119,6 +119,8 @@ GEM
     dotenv-rails (3.1.2)
       dotenv (= 3.1.2)
       railties (>= 6.1)
+    down (5.4.2)
+      addressable (~> 2.8)
     drb (2.2.1)
     error_highlight (0.6.0)
     erubi (1.13.0)
@@ -132,9 +134,12 @@ GEM
       multipart-post (~> 2)
     faraday-net_http (3.3.0)
       net-http
-    ffi (1.17.0)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-arm-linux-gnu)
     ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
     globalid (1.2.1)
@@ -316,6 +321,7 @@ DEPENDENCIES
   debug
   devise (= 4.9.3)
   dotenv-rails
+  down (~> 5.0)
   error_highlight (>= 0.4.0)
   font-awesome-sass (~> 6.1)
   importmap-rails
