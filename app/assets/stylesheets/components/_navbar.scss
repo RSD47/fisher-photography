@@ -1,3 +1,9 @@
+.navbar {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -13,5 +19,17 @@
 
 .nav-link {
   border: 0;
+  color: white;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }

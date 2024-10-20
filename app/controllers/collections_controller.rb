@@ -7,6 +7,7 @@ class CollectionsController < ApplicationController
 
   def show
     @image = Image.new
+    # @collection.images.sort_by { |image| image.id }
   end
 
   def new

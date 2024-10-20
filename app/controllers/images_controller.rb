@@ -1,6 +1,6 @@
 # require "open-uri"
 require "down"
-require "fileutilis"
+require "fileutils"
 
 class ImagesController < ApplicationController
   before_action :set_image, only: %i[show destroy download]
@@ -11,9 +11,10 @@ class ImagesController < ApplicationController
   # end
 
   def show
+    Image.increment_counter(:views, @image, by: 1)
     @image.collection = @collection
     # @url = Cloudinary::Utils.private_download_url @image.photos[0].cloudinary_id, self.format, attachment: true
-    @image.views = + 1
+    # @image.views.increment(:click).save
     # send_data @image.photo.file.read, filename: @image.photo.name
   end
 
@@ -56,15 +57,16 @@ class ImagesController < ApplicationController
     # dirname = "C:/Users/samue"
     # respond_to do |format|
     #   format.png { send_data Image.to_png }
-    # Cloudinary::Utils.private_download_url @image.photos[0].id, "jpg", attachment: true
+    # Cloudinary::Utils.private_download_url @image.photos[0].id, 'jpg', attachment: true
     # @image.photos[0].download
     # URI.open(@image.photos[0].url) do |image|
     #   File.open(File.join(Dir.pwd, dirname, "test.jp"), "w+") do |file|
     #     file.write(image.read)
     #   end
     # end
-    tempfile = Down.download(@image.photos[0].url)
-    FileUtilis.mv(tempfile.path, "./#")
+    # tempfile = Down.download(@image.photos[0].url)
+    # FileUtils.mv(tempfile.path, "./#")
+    send_file("https://res.cloudinary.com/dxk1tmnej/image/upload/v1/development/d3xs1btqeeq0k7l1q8htachk5gjf.jpg?_a=BACE6GBn", type: "image/jpeg")
   end
 
   private

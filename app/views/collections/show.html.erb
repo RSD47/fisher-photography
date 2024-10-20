@@ -3,7 +3,7 @@
     <h3 class="title">Pictures</h3>
     <%= link_to "Add pictures", new_collection_image_path(@collection, @image) %>
   </div>
-  <div>
+  <div class="container d-flex">
     <% @collection.images.each do |image| %>
       <% image.photos.each do |photo| %>
         <%# <div class="card img-card p-2 rounded-4"> %>
