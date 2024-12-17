@@ -1,0 +1,35 @@
+// html, body {
+//   height: 100%;
+//   width: 100%;
+// }
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .navbar {
+//   display: none;
+// }
+
+div, a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
+  height: 98.5vh;
+  width: 99vw;
+}
+
+a {
+  height: 60%;
+  width: 600px;
+}
+
+#landing-img {
+  height: 100%;
+  width: 100%;
+}
