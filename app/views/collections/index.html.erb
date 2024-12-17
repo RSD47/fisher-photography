@@ -1,8 +1,6 @@
 <div class="container d-flex flex-column justify-content-center">
-  <div class="d-flex justify-content-between">
-    <div>
-      <h3 class="title">Collections</h3>
-    </div>
+  <div class="sub-header d-flex justify-content-between">
+    <h3 class="title">Collections</h3>
     <%= link_to "Add pictures", new_collection_path, class: "nav-link btn text-primary me-4 button" %>
   </div>
   <% if @collections.empty? %>
@@ -10,10 +8,10 @@
       <p>No photo collections have been made yet</p>
     </div>
   <% else %>
-    <div class="collect-grid d-flex justify-content-start">
+    <div class="collect-grid">
       <%# <div class="d-flex flex-wrap"> %>
         <% @collections.each do |collection| %>
-          <%= link_to collection_path(collection) do %>
+          <%= link_to collection_path(collection), class: "collection-link" do %>
             <div class="coll-card position-relative">
               <div class="img-container">
                 <%= cl_image_tag collection.photo.key, height: 250, crop: :fill, class: "photo" %>

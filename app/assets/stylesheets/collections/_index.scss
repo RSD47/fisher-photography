@@ -16,6 +16,27 @@ body {
   top: -16px;
 }
 
+.container {
+  // margin: 100px;
+  // margin-top: 0;
+  // margin-bottom: 0;
+  width: 100vw;
+}
+
+.sub-header {
+  width: 100%;
+}
+
+.collection-link {
+  margin: 40px;
+  width: 300px;
+}
+
+.collect-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
 h3 {
   color: black;
 }
@@ -25,5 +46,6 @@ a {
 }
 
 button {
+  width: 20%;
   background: black;
 }
