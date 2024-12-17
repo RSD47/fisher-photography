@@ -18,6 +18,15 @@
   width: 40px;
 }
 
+.nav-img {
+  height: 100%;
+  width: 60px;
+}
+
+.nav-title {
+  width: 275px;
+}
+
 .nav-link {
   border: 0;
   color: white;
@@ -28,6 +37,10 @@
   justify-content: center;
   flex-wrap: nowrap;
   color: white;
+}
+
+.home-link {
+  width: 400px;
 }
 
 a {
