@@ -16,6 +16,9 @@
               <div class="img-container">
                 <%= cl_image_tag collection.photo.key, height: 250, crop: :fill, class: "photo" %>
               </div>
+              <div class= "text-light">
+                <%= collection.match %>
+              </div>
             </div>
           <% end %>
         <% end %>

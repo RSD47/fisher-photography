@@ -1,5 +1,6 @@
-<div class="landing">
-  <%= link_to collections_path do %>
-    <img src="<%= asset_path('fisher_logo.png') %>" id="landing-img">
-  <% end %>
-</div>
+<%= link_to collections_path do %>
+  <div class="landing">
+    <img src="<%= asset_path('fisher_logo_left.png') %>" id="landing-img-left">
+    <img src="<%= asset_path('fisher_logo_right.png') %>" id="landing-img-right">
+  </div>
+<% end %>
