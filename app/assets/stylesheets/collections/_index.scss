@@ -35,8 +35,9 @@ body {
 .collect-grid {
   height: 420px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 h3 {

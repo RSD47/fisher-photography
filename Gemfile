@@ -49,6 +49,7 @@ gem "sassc-rails"
 gem "cloudinary"
 gem "devise", '4.9.3'
 gem "down", "~> 5.0"
+gem "jbuilder"
 
 group :development, :test do
   gem "dotenv-rails"

@@ -9,20 +9,18 @@
     </div>
   <% else %>
     <div class="collect-grid">
-      <%# <div class="d-flex flex-wrap"> %>
-        <% @collections.each do |collection| %>
-          <%= link_to collection_path(collection), class: "collection-link" do %>
-            <div class="coll-card position-relative">
-              <div class="img-container">
-                <%= cl_image_tag collection.photo.key, height: 250, crop: :fill, class: "photo" %>
-              </div>
-              <div class= "text-light">
-                <%= collection.match %>
-              </div>
+      <% @collections.each do |collection| %>
+        <%= link_to collection_path(collection), class: "collection-link" do %>
+          <div class="coll-card position-relative">
+            <div class="img-container">
+              <%= cl_image_tag collection.photo.key, height: 250, crop: :fill, class: "photo" %>
             </div>
-          <% end %>
+            <div class= "text-light">
+              <%= collection.match %>
+            </div>
+          </div>
         <% end %>
-      <%# </div> %>
+      <% end %>
     </div>
   <% end %>
 </div>

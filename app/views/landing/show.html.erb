@@ -1,6 +1,6 @@
-<%= link_to collections_path do %>
-  <div class="landing">
-    <img src="<%= asset_path('fisher_logo_left.png') %>" id="landing-img-left">
-    <img src="<%= asset_path('fisher_logo_right.png') %>" id="landing-img-right">
-  </div>
-<% end %>
+<div id="landing">
+  <%= link_to collections_path, action: "click->open#slideLeft" do %>
+    <img src="<%= asset_path('fisher_logo_left.png') %>" id="landing-img-left" class="animation">
+    <img src="<%= asset_path('fisher_logo_right.png') %>" id="landing-img-right" class="animation" >
+  <% end %>
+</div>

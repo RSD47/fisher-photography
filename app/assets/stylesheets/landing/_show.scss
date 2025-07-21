@@ -19,9 +19,10 @@ div, a {
   align-items: center;
 }
 
-.landing {
+#landing {
   height: 98.5vh;
   width: 99vw;
+  position: relative;
 }
 
 a {
@@ -29,11 +30,26 @@ a {
   width: 600px;
 }
 
-#landing-img-left, #landing-img-right {
-  height: 75%;
-  width: 75%;
-}
+// #landing-img-left, #landing-img-right {
+// }
 
-#landing-img-left {
+// .animation {
+//   position: absolute;
+// }
 
-}
+// #landing-img-left {
+//   object-position: -79px;
+//   animation-name: moveLeft;
+// }
+
+// #landing-img-right {
+//   object-position: 79px
+// }
+
+// @keyframes moveLeft {
+//   0% {  }
+// }
+
+// #landing-img-left {
+
+// }
