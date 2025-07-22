@@ -1,20 +1,21 @@
 .coll-card, .img-card {
-  margin: 50px;
+  // margin: 50px;
   border: 3px solid dimgray;
   // border-radius: 24.5px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   background-color: black;
   // height: 200px;
   // width: 230px;
-  max-height: 300px;
-  min-height: 200px;
-  max-width: 350px;
-  min-width: 230px;
+  // max-height: 300px;
+  // min-height: 200px;
+  // max-width: 350px;
+  // min-width: 230px;
 }
 
 // .coll-card {
+  // margin: 50px;
   // border-radius: 25%;
   // height: 275px;
   // width: 375px;
@@ -34,13 +35,14 @@ a {
 
 .img-container {
   height: 100%;
-  // width: 100%;
+  width: 230px;
 }
 
-.photo {
-  // border-radius: 22.5px;
-  // width: autorar;
-  height: 100%;
-  width: 100%;
-  // object-fit: fill;
-}
+// .photo {
+  // object-fit: contain;
+//   border-radius: 22.5px;
+//   width: autorar;
+//   height: 200px;
+//   width: 100%;
+//   object-fit: fill;
+// }

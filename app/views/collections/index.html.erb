@@ -8,12 +8,12 @@
       <p>No photo collections have been made yet</p>
     </div>
   <% else %>
-    <div class="collect-grid">
+    <div class="collect-grid mt-4">
       <% @collections.each do |collection| %>
         <%= link_to collection_path(collection), class: "collection-link" do %>
-          <div class="coll-card position-relative">
+          <div class="coll-card position-relative margin-2">
             <div class="img-container">
-              <%= cl_image_tag collection.photo.key, height: 250, crop: :fill, class: "photo" %>
+              <%= cl_image_tag collection.photo.key ,crop: :fill, height: 200, width: 230, class: "photo" %>
             </div>
             <div class= "text-light">
               <%= collection.match %>
