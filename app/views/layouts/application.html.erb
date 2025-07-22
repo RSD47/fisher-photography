@@ -11,9 +11,9 @@
   </head>
 
   <body>
-    <% unless current_page?('') %>
+    <%# <% unless current_page?('') %>
       <%= render "shared/navbar" %>
-    <% end %>
+    <%# <% end %>
     <p class="notice flex-fill"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
