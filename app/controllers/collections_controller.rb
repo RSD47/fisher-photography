@@ -7,7 +7,6 @@ class CollectionsController < ApplicationController
 
   def show
     @image = Image.new
-    # @collection.images.sort_by { |image| image.id }
   end
 
   def new
@@ -18,9 +17,6 @@ class CollectionsController < ApplicationController
     @collection = current_user.collections.new(collection_params)
 
     if @collection.save
-      # @collection.photos.each do
-      #   Image.create
-      # end
       redirect_to collections_path, notice: "Collection created"
     else
       render :new, status: :unprocessable_entity
