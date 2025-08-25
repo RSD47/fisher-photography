@@ -1,7 +1,52 @@
 <div class="container d-flex flex-column justify-content-center">
+  <% if @collections.empty? %>
+    <div></div>
+  <% else %>
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @collections[-1].images.each do |img| %>
+          <% img.photos.each do |photo| %>
+            <% if img == @collections[-1].images.first %>
+              <div class="carousel-item active">
+                <%= cl_image_tag photo.key, class: "c-photo align-self-center" %>
+              </div>
+            <% else %>
+              <div class="carousel-item">
+                <%= cl_image_tag photo.key, class: "c-photo" %>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+        <button class="carousel-control-prev" type="button"
+        data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+        data-bs-target="#mainCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="carousel-indicator">
+        <% @collections[-1].images.count.times do |i| %>
+          <% if i == 0 %>
+            <button type="button" data-bs-target="#mainCarousel"
+            data-bs-slide-to=<% i.to_s %> class="active" aria-current="true"
+            aria-lable=<% "slide" + i.to_s%> onclick="goToSlide(i)"></button>
+          <% else %>
+            <button type="button" data-bs-target="#mainCarousel"
+            data-bs-slide-to=<% i.to_s %>
+            aria-lable=<% "slide" + i.to_s%> onclick="goToSlide(i)"></button>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
   <div class="sub-header d-flex justify-content-between">
     <h3 class="title">Collections</h3>
-    <%= link_to "Add pictures", new_collection_path, class: "nav-link btn text-primary me-4 button" %>
+    <%= link_to "Add pictures", new_collection_path, class: "nav-link btn
+    text-primary me-4 button" %>
   </div>
   <% if @collections.empty? %>
     <div class="d-flex justify-content-center mt-5 fw-semibold">
@@ -9,11 +54,12 @@
     </div>
   <% else %>
     <div class="collect-grid mt-4">
-      <% @collections.each do |collection| %>
+      <% @collections.reverse.each do |collection| %>
         <%= link_to collection_path(collection), class: "collection-link" do %>
           <div class="coll-card position-relative margin-2">
             <div class="img-container">
-              <%= cl_image_tag collection.photo.key ,crop: :fill, height: 200, width: 230, class: "photo" %>
+              <%= cl_image_tag collection.photo.key, crop: :fill, height: 200,
+              width: 230, class: "photo" %>
             </div>
             <div class= "text-light">
               <%= collection.match %>
@@ -24,3 +70,11 @@
     </div>
   <% end %>
 </div>
+
+<script>
+  function goToSlide(slideIndex) {
+    const carousel = document.getElementById("mainCarousel");
+    const carouselInstance = new bootstrap.Carousel(carousel);
+    carouselInsance.to(slideIndex);
+  }
+</script>

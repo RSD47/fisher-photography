@@ -2,6 +2,32 @@ html {
   height: 100vh;
 }
 
+#mainCarousel {
+  margin-bottom: 30px;
+  height: 450px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+// .carousel-inner {
+//   display: flex;
+//   justify-content: center;
+// }
+
+.carousel-item {
+  margin-left: 550px;
+  margin-right: 550px;
+  height: 100%;
+  width: 100%;
+}
+
+.c-photo {
+  height: 450px;
+}
+
 .sub-header {
   width: 100%;
 }

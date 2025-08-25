@@ -7,11 +7,12 @@
     <% @collection.images.each do |image| %>
       <% image.photos.each do |photo| %>
         <%= link_to collection_image_path(@collection, image), class: "photo text-decoration-none rounded-top-4" do %>
-          <div class="img-card">
+          <div class="img-card position-relative margin-2">
             <div class="img-container">
-              <%= cl_image_tag photo.key, class: "photo" %>
+              <%= cl_image_tag photo.key, crop: :fill, height: 200,
+              width: 230, class: "photo" %>
             </div>
-            <div class="d-flex justify-content-between text-white">
+            <div class="d-flex justify-content-between text-light">
               <p>Views: <%= image.views %></p>
             </div>
           </div>
