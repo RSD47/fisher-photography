@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  befroe_action :authenticate_user!
+  before_action :authenticate_user!
   include Pundit::Authorization
 
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
