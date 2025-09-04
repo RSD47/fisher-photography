@@ -7,14 +7,17 @@ class CollectionsController < ApplicationController
 
   def show
     @image = Image.new
+    authorize @collection
   end
 
   def new
     @collection = Collection.new
+    authorize @collection
   end
 
   def create
     @collection = current_user.collections.new(collection_params)
+    authorize @collection
 
     if @collection.save
       redirect_to collections_path, notice: "Collection created"

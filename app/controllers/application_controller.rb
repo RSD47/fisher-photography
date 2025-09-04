@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
   #   redirect_to(root_path)
   # end
 
+  def show?
+    true
+  end
+
   private
 
   def skip_pundit?
